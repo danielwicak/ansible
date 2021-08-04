@@ -21,4 +21,4 @@ jobs:
       uses: dawidd6/action-ansible-playbook@v2.5.0
       with:
         playbook: playbook.yml
-        key: ${{secrets.ssh_recrut_vm1}
+        key: ${{secrets.ssh_recrut_vm1}}
