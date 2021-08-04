@@ -16,7 +16,10 @@ jobs:
       run:
         shell: bash
 
-    steps:  
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      
     - name: Run Ansible playbook
       uses: dawidd6/action-ansible-playbook@v2.5.0
       with:
