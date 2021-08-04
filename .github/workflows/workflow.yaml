@@ -1,5 +1,24 @@
-- name: Run Ansible playbook
-  uses: dawidd6/action-ansible-playbook@v2.5.0
-  with:
-    playbook: playbook.yml
-    key: ${{secrets.ssh_recrut_vm1}
+name: 'Terraform CI'
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+
+jobs:
+  Ansible:
+    name: 'ansible'
+    runs-on: ubuntu-latest
+
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:  
+    - name: Run Ansible playbook
+      uses: dawidd6/action-ansible-playbook@v2.5.0
+      with:
+        playbook: playbook.yml
+        key: ${{secrets.ssh_recrut_vm1}
