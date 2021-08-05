@@ -1,0 +1,9 @@
+add_host:
+      hostname: "{{ 168.63.152.136 }}"
+ package:
+        name: httpd
+        state: present
+- name: start httpd
+  service:
+          name: httpd
+          state: started
