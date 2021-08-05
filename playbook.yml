@@ -1,6 +1,0 @@
-- hosts: webrecrut
-  name: "Test ping"
-  gather_facts: false
-  remote_user: azureuser
-  tasks:
-  - action: ping
